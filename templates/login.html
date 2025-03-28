@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Login - FitTrack{% endblock %}
+
+{% block content %}
+<div class="container" style="max-width: 500px;">
+  <div style="background-color: white; border-radius: 10px; padding: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+    <h2 style="text-align: center; margin-bottom: 25px;">Login</h2>
+    
+    <form action="{{ url_for('login') }}" method="POST">
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 8px; font-weight: 500;">Email</label>
+        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+      </div>
+      
+      <div style="margin-bottom: 25px;">
+        <label style="display: block; margin-bottom: 8px; font-weight: 500;">Password</label>
+        <input type="password" name="password" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+      </div>
+      
+      <button type="submit" class="btn" style="width: 100%; padding: 12px;">Login</button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 20px;">
+      Don't have an account? <a href="{{ url_for('register') }}" style="color: var(--primary);">Register</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

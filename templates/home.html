@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}Home - FitTrack{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div style="text-align: center; padding: 40px 0;">
+        <h1 style="font-size: 36px; margin-bottom: 20px;">Track Your Fitness Progress</h1>
+        <p style="font-size: 18px; max-width: 600px; margin: 0 auto 30px;">
+            Upload your workout data and visualize your progress with simple charts.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+            <a href="{{ url_for('dashboard') }}" class="btn" style="background-color: white; color: var(--primary); border: 1px solid var(--primary);">View Demo</a>
+        </div>
+    </div>
+    
+    <div style="background-color: white; border-radius: 10px; padding: 30px; margin-top: 40px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+        <h2 style="margin-bottom: 20px; text-align: center;">How It Works</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+            <div style="text-align: center; padding: 20px;">
+                <i class="fas fa-file-csv" style="font-size: 40px; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3 style="margin-bottom: 10px;">1. Upload CSV</h3>
+                <p>Upload your workout data in CSV format.</p>
+            </div>
+            <div style="text-align: center; padding: 20px;">
+                <i class="fas fa-chart-line" style="font-size: 40px; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3 style="margin-bottom: 10px;">2. View Dashboard</h3>
+                <p>See your progress visualized.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
